@@ -141,6 +141,7 @@ export const SettingsControl = () => {
           if (option && Array.isArray(option)) {
             const classNames = option.map((item) => item.value).join(' ');
             setProp((props: { className: string }) => {
+              console.log("Component is ",option);
               console.log('Setting props ', props.className);
               props.className = classNames;
             });
